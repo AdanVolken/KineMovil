@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KineMovil.View.HomePage"
+             Title="HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cliente" Order="Primary" />
+        <ToolbarItem Text="Calendario" Order="Primary" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <!-- Barra superior -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Contenido principal -->
+        <ContentView Grid.Row="1" x:Name="MainContentView">
+            <!-- Esta es la vista principal que cambiará según el botón presionado -->
+        </ContentView>
+
+        <!-- Barra inferior -->
+        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="#6b47e9" HeightRequest="60">
+            <Button Text="Mapa" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" Clicked="OnMapaClicked"/>
+            <Button Text="Musculo" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" Clicked="OnMusculoClicked"/>
+            <Button Text="Sintoma" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" Clicked="OnSintomaClicked"/>
+            <Button Text="Busqueda" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" Clicked="OnBusquedaClicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
