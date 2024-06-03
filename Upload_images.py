@@ -46,7 +46,7 @@ for filename in os.listdir(image_folder):
         VALUES (?, ?, ?)
         """
         # Supongamos que IdParte es 1 por defecto o puede ser ajustado según sea necesario
-        cursor.execute(insert_query, (muscle_name, img_data, 1))
+        cursor.execute(insert_query, (muscle_name, img_data, 3))
 
 # Confirma los cambios y cierra la conexión
 conn.commit()
