@@ -7,11 +7,19 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using System.Collections.ObjectModel;
 
 namespace KineMovil.ViewModel
 {
     class VMMusculo : INotifyPropertyChanged
     {
+        private ObservableCollection<Musculo> _musculos;
+        public ObservableCollection<Musculo> Musculos
+        {
+            get { return _musculos; }
+            set { _musculos = value; OnPropertyChanged(); }
+        }
+
         private string _nombre;
         private byte[] _puntoGatillo;
         private int _idParte;
