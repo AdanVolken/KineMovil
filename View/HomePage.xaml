@@ -27,7 +27,6 @@
             <Button x:Name="btnMapa" Text="Mapa" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand"  />
             <Button x:Name="btnMusculo" Text="Musculo" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" />
             <Button x:Name="btnSintomas" Text="Sintoma" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" />
-            <Button x:Name="btnBusqueda" Text="Busqueda" TextColor="White" BackgroundColor="#6b47e9" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </Grid>
 </ContentPage>
