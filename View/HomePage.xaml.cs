@@ -5,6 +5,8 @@ using System.Linq;
 using KineMovil.ViewModel;
 using Dapper;
 using KineMovil.ViewModel;
+using KineMovil.Model;
+using System.Collections.ObjectModel;
 
 namespace KineMovil.View
 {
@@ -21,15 +23,8 @@ namespace KineMovil.View
 
         private async void btnMusculo_Clicked(object sender, EventArgs e)
         {
-            using (var conexion = new SqlConnection(_connectionString))
-            {
-                await conexion.OpenAsync();
-                var musculos = await conexion.QueryAsync<Musculo>("SELECT * FROM Musculos");
-                var vm = new VMMusculo();
-                vm.Musculos = musculos.ToList(); // Asigna los músculos a una propiedad en el ViewModel
-                var musculoPageView = new MusculoPageView(vm);
-                MainContentView.Content = musculoPageView.Content;
-            }
+            var musculoPageView = new MusculoPageView();
+            MainContentView.Content = musculoPageView.Content;
         }
 
         private void btnSintomas_Clicked(object sender, EventArgs e)
